@@ -12,13 +12,15 @@ def generate_project_plan(description_file, timeline_file):
     timeline = pd.read_csv(timeline_file)
 
     # Generate structured plan
-    plan = {
-        "Project Overview": description.strip(),
-        "Phases": timeline["phase"].tolist(),
-        "Milestones": timeline["milestones_deliverables"].tolist(),
-        "Deliverables": timeline["Deliverable"].tolist(),
-        "Duration (weeks)": timeline["Duration"].tolist()
-    }
+   plan = {
+    "Project Overview": description.strip(),
+    "Phases": timeline["phase_name"].tolist(),
+    "Start Weeks": timeline["start_week"].tolist(),
+    "End Weeks": timeline["end_week"].tolist(),
+    "Key Activities": timeline["key_activities"].tolist(),
+    "Milestones & Deliverables": timeline["milestones_deliverables"].tolist()
+}
+
 
     return plan
 
