@@ -1,20 +1,21 @@
-# Mira-Project-Assistant
+# Mira Project Assistant
 
-## Overview
-Mira is an AI-powered multi-agent assistant that automates:
-- Project plan generation
-- Risk assessment
-- Weekly status reporting
+## 📌 Overview
+Mira Project Assistant is a Python-based tool designed to help product managers and stakeholders streamline project planning, risk assessment, and reporting.  
+It combines multiple specialized agents into one assistant that generates clear, actionable outputs.
 
-## Repository Structure
-- `/data` → project files (timeline, risks, task board)
-- `/agents` → agent workflows and orchestration logic
-- `/tests` → baseline test inputs and evaluation results
-- `/docs` → architecture diagram, writeup, screenshots
+---
 
-## Goal
-To reduce manual PM effort by automating structured, data-grounded outputs for Nexora’s AI Adoption Project.
+## 🚀 Features
+- **Planner Agent** → Creates structured project plans and timelines.
+- **Risk Assessor Agent** → Identifies risks and mitigation strategies.
+- **Status Reporter Agent** → Summarizes progress and generates stakeholder-ready reports.
+- **Stakeholder Reports** → Outputs in both `.txt` and `.md` formats for easy sharing.
 
+---
 
-This line is only for feature-planner testing.
-
+## 🛠️ Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/reshmamr87-bit/Mira-Project-Assistant.git
+   cd Mira-Project-Assistant
