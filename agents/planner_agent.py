@@ -1,6 +1,3 @@
-# Planner Agent for Mira
-# Reads project description and timeline to generate structured plan
-
 import pandas as pd
 
 def generate_project_plan(description_file, timeline_file):
@@ -22,5 +19,8 @@ def generate_project_plan(description_file, timeline_file):
     }
 
     return plan
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c4cc055 (Add planner, risk, status agents + stakeholder report)
