@@ -14,3 +14,7 @@ Mira is an AI-powered multi-agent assistant that automates:
 
 ## Goal
 To reduce manual PM effort by automating structured, data-grounded outputs for Nexora’s AI Adoption Project.
+
+
+This line is only for feature-planner testing.
+
