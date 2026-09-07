@@ -15,7 +15,7 @@ def generate_project_plan(description_file, timeline_file):
     plan = {
         "Project Overview": description.strip(),
         "Phases": timeline["phase"].tolist(),
-        "Milestones": timeline["Milestone"].tolist(),
+        "Milestones": timeline["milestones_deliverables"].tolist(),
         "Deliverables": timeline["Deliverable"].tolist(),
         "Duration (weeks)": timeline["Duration"].tolist()
     }
