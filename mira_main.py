@@ -1,6 +1,7 @@
 from agents.planner_agent import generate_project_plan
 from agents.risk_assessor_agent import generate_risk_matrix
 from agents.status_reporter_agent import generate_status_report
+from agents.milestone_tracker import MilestoneTracker
 from datetime import datetime, timedelta
 
 def main():
@@ -127,6 +128,29 @@ def main():
         report_output += f" {risks['Risk ID'][i]} - {risks['Category'][i]}: {risks['Challenge'][i]}\n"
         markdown_output += f"- {risks['Risk ID'][i]} - {risks['Category'][i]}: {risks['Challenge'][i]}\n"
 
+    # === Milestone Alerts ===
+    tracker = MilestoneTracker()
+    upcoming = tracker.upcoming_milestones()
+    risks_m = tracker.at_risk_milestones()
+
+    report_output += "\n📅 Milestone Alerts\n"
+    markdown_output += "\n## 📅 Milestone Alerts\n\n"
+
+    report_output += "\nUpcoming Milestones (next 2 weeks):\n"
+    markdown_output += "### Upcoming Milestones (next 2 weeks)\n"
+    for m in upcoming:
+        report_output += f"- {m['milestone']} (Due: {m['due_date']}, Status: {m['status']})\n"
+    for m in upcoming:
+        report_output += f"- {m['milestone']} (Due: {m['due_date']}, Status: {m['status']})\n"
+        markdown_output += f"- {m['milestone']} (Due: {m['due_date']}, Status: {m['status']})\n"
+
+    report_output += "\nAt-Risk Milestones:\n"
+    markdown_output += "\n### At-Risk Milestones\n"
+    for r in risks_m:
+        report_output += f"- {r['milestone']} (Due: {r['due_date']}, Status: {r['status']})\n"
+        markdown_output += f"- {r['milestone']} (Due: {r['due_date']}, Status: {r['status']})\n"
+
+    # === End of Report ===
     report_output += "\n==================== End of Report ====================\n"
     markdown_output += "\n---\n\n_End of Report_\n"
 
