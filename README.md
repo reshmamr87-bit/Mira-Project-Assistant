@@ -19,3 +19,11 @@ It combines multiple specialized agents into one assistant that generates clear,
    ```bash
    git clone https://github.com/reshmamr87-bit/Mira-Project-Assistant.git
    cd Mira-Project-Assistant
+
+   
+## Capstone Deliverables
+- [Q1 Ideation](Q1_Ideation.md)
+- [Q2 Design](Q2_Design.md)
+- [Q3 Program Charter](Q3_Charter.md)
+- [Q4 Reflection](Q4_Reflection.md)
+
